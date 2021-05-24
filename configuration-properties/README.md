@@ -25,7 +25,7 @@ Otherwise, proceed with setter methods.
 
 3. Enable Configuration Properties on the main Spring Boot configuration
 Add `@EnableConfigurationProperties` to the configuration class, e.g.
-your (@SpringBootApplication[src/main/java/org/example/Application.java]. 
+your [@SpringBootApplication](src/main/java/org/example/Application.java). 
 Add each of your configuration properties classes to the value of this annotation. 
 
 4. Inject your configuration properties classes.
