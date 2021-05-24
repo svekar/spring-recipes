@@ -16,8 +16,8 @@ root class of your configuration.
 Design subclasses for each hierarchical part of the properties naming scheme. 
 Use a more precise prefix if you want to match parts of a hierarchical property 
 naming schemes. Examples:
-    * [Record](./blob/main/configuration-properties/src/main/java/org/example/ConfigurationPropertiesRecord.java)
-    * [Old-style class](./blob/main/configuration-properties/src/main/java/org/example/ConfigurationPropertiesClass.java)  
+    * [Record](./src/main/java/org/example/ConfigurationPropertiesRecord.java)
+    * [Old-style class](./src/main/java/org/example/ConfigurationPropertiesClass.java)  
 
 2. Add `@ConstructorBinding` to the root class if you want the class to be 
 immutable. This instructs Spring Boot to inject values through your constructors.
