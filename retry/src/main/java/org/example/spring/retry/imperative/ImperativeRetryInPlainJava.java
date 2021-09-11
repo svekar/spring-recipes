@@ -7,6 +7,11 @@ class ImperativeRetryInPlainJava {
 
 	private final RetryTemplate retryTemplate;
 
+	private final RetryCallback<Integer, RuntimeException> callback = ctx -> {
+		System.out.println("Not getting stuff done...");
+		return 42 / 0;
+	};
+	
 	ImperativeRetryInPlainJava() {
 		retryTemplate = RetryTemplate.builder()
 				.fixedBackoff(42)
@@ -14,13 +19,8 @@ class ImperativeRetryInPlainJava {
 				.build();
 	}
 
-	void service() {
-		RetryCallback<Void, RuntimeException> callback = ctx -> {
-			System.out.println("Not getting stuff done...");
-			System.out.println(2 / 0);
-			return null;
-		};
-		retryTemplate.execute(callback);
+	int service() {
+		return retryTemplate.execute(callback);
 	}
 	
 	public static void main(String[] args) {	
