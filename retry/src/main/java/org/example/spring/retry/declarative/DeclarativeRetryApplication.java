@@ -3,6 +3,7 @@ package org.example.spring.retry.declarative;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
@@ -39,7 +40,7 @@ class RetryableService {
 
 	}
 
-	@Retryable(maxAttemptsExpression = "${max.attempts}")
+	@Retryable(maxAttemptsExpression = "${max.attempts}", backoff = @Backoff(delay = 20))
 	public void service() {
 		System.out.println("Trying, but failing...");
 		throw new IllegalStateException();

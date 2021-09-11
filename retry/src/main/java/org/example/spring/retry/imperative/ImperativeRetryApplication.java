@@ -47,6 +47,7 @@ class ImperativelyRetryableService {
 		retryTemplate = RetryTemplate.builder()
 				.maxAttempts(maxAttempts)
 				.withListeners(listeners)
+				.fixedBackoff(20)
 				.build();
 	}
 
