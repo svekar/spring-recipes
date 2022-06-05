@@ -9,12 +9,6 @@
 	</parent>
 	<artifactId>configuration-properties</artifactId>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.boot.version>2.6.1</spring.boot.version>
-		<maven.compiler.release>16</maven.compiler.release>
-	</properties>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -51,7 +45,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M5</version>
+					<version>3.0.0-M6</version>
 				</plugin>
 			</plugins>
 
