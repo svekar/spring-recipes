@@ -44,7 +44,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v3.6.0
       with:
-        java-version: '18'
+        java-version: '19'
         distribution: 'zulu'
         cache: 'maven'
 
