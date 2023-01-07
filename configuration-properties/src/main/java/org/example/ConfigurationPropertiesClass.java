@@ -1,10 +1,8 @@
 package org.example;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.ConstructorBinding;
 
 @ConfigurationProperties(prefix = "")
-@ConstructorBinding
 final class ConfigurationPropertiesClass {
 
 	static final class My {
