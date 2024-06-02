@@ -15,13 +15,20 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.boot.version>3.1.3</spring.boot.version>
+		<spring.boot.version>3.3.0</spring.boot.version>
 		<java.version>19</java.version>
 		<maven.compiler.release>19</maven.compiler.release>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<!-- Overriden, since spring-boot-starter-test 3.3.0 pulls in a
+			     vulnerable version (CVE-2024-31573). -->
+			<dependency>
+				<groupId>org.xmlunit</groupId>
+				<artifactId>xmlunit-core</artifactId>
+				<version>2.10.0</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
@@ -56,7 +63,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.1.2</version>
+					<version>3.2.5</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-dependecy-plugin</artifactId>
