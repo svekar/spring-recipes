@@ -15,7 +15,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.boot.version>3.4.3</spring.boot.version>
+		<spring.boot.version>3.5.3</spring.boot.version>
 		<logback.version>1.5.15</logback.version>
 		<java.version>21</java.version>
 		<maven.compiler.release>21</maven.compiler.release>
